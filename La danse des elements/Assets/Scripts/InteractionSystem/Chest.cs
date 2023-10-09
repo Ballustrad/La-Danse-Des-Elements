@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chest : MonoBehaviour
+public class Chest : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private string _prompt;
 
-    // Update is called once per frame
-    void Update()
+    string IInteractable.InteractionPrompt => _prompt;
+
+    bool IInteractable.Interact(Interactor interactor)
     {
-        
+        //throw new System.NotImplementedException();
+        Debug.Log(message: "Opening Chest!");
+        return true;
     }
 }
