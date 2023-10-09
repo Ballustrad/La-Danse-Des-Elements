@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 528191307}
   - component: {fileID: 528191306}
   - component: {fileID: 528191305}
+  - component: {fileID: 528191310}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -243,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 528191304}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8909927, y: 4.66, z: -1.6624316}
+  m_LocalPosition: {x: 0.1, y: 4.66, z: -1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -251,6 +252,19 @@ Transform:
   - {fileID: 1123196698}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528191310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528191304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ccce6054f67ee48893286210c484d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasKey: 0
 --- !u!1 &706814810
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +383,7 @@ GameObject:
   - component: {fileID: 751544097}
   - component: {fileID: 751544096}
   - component: {fileID: 751544095}
+  - component: {fileID: 751544099}
   m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
@@ -462,6 +477,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &751544099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751544094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db90bb9321c520043ad751f62b9bbdbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prompt: 
 --- !u!1 &831719101
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +502,7 @@ GameObject:
   - component: {fileID: 831719104}
   - component: {fileID: 831719103}
   - component: {fileID: 831719102}
+  - component: {fileID: 831719106}
   m_Layer: 6
   m_Name: Chest
   m_TagString: Untagged
@@ -567,6 +596,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &831719106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831719101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3db6d16247013f4f964914acdc02807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prompt: 
 --- !u!1 &1123196697
 GameObject:
   m_ObjectHideFlags: 0

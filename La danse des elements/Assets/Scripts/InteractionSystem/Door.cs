@@ -11,7 +11,17 @@ public class Door : MonoBehaviour, IInteractable
     bool IInteractable.Interact(Interactor interactor)
     {
         //throw new System.NotImplementedException();
-        Debug.Log(message: "Opening Door!");
+        var inventory = interactor.GetComponent<Inventory>();
+
+        if (inventory == null) return false;
+        
+        if (inventory.HasKey)
+        {
+            Debug.Log(message: "Opening Door !");
+            return true;
+        }
+
+        Debug.Log(message: "No Key Found !");
         return true;
     }
     
