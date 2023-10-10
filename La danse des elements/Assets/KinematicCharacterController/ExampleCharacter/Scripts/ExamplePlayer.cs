@@ -17,6 +17,11 @@ namespace KinematicCharacterController.Examples
         private const string HorizontalInput = "Horizontal";
         private const string VerticalInput = "Vertical";
 
+        public GameObject Fire;
+        public GameObject Water;
+        public GameObject Wind;
+        public GameObject Earth;
+
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -35,7 +40,10 @@ namespace KinematicCharacterController.Examples
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }
-
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SwapElement();
+            }
             HandleCharacterInput();
         }
 
@@ -71,13 +79,13 @@ namespace KinematicCharacterController.Examples
 #endif
 
             // Apply inputs to the camera
-            CharacterCamera.UpdateWithInput(Time.deltaTime, scrollInput, lookInputVector);
+            CharacterCamera.UpdateWithInput(Time.deltaTime, 0f, lookInputVector);
 
             // Handle toggling zoom level
-            if (Input.GetMouseButtonDown(1))
+           /* if (Input.GetMouseButtonDown(1))
             {
                 CharacterCamera.TargetDistance = (CharacterCamera.TargetDistance == 0f) ? CharacterCamera.DefaultDistance : 0f;
-            }
+            }*/
         }
 
         private void HandleCharacterInput()
@@ -89,11 +97,51 @@ namespace KinematicCharacterController.Examples
             characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
             characterInputs.CameraRotation = CharacterCamera.Transform.rotation;
             characterInputs.JumpDown = Input.GetKeyDown(KeyCode.Space);
-            characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
-            characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
+            //characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
+            //characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
 
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
+        }
+        public bool fireIsOn = true;
+        public bool waterIsON = false;
+        public bool windIsOn = false;
+        public bool earthIsOn = false;
+
+
+        public void SwapElement()
+        {
+            if (fireIsOn == true)
+            {
+                Fire.gameObject.SetActive(false);
+                Earth.gameObject.SetActive(true);
+                earthIsOn = true;
+                fireIsOn = false;
+
+            }
+            else if (waterIsON == true)
+            {
+                Water.gameObject.SetActive(false);
+                waterIsON = false;
+                Fire.gameObject.SetActive(true);
+                fireIsOn = true;
+            }
+            else if(earthIsOn == true)
+            {
+                Earth.gameObject.SetActive(false);
+                earthIsOn=false;
+                Wind.gameObject.SetActive(true);
+                windIsOn = true;
+
+            }
+            else if(windIsOn == true)
+            {
+                Wind.gameObject.SetActive(false);
+                windIsOn = false;
+                Water.gameObject.SetActive(true);
+                waterIsON=true;
+            }
+            
         }
     }
 }
