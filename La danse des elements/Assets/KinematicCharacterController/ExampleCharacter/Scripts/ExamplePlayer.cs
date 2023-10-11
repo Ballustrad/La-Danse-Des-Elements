@@ -36,6 +36,16 @@ namespace KinematicCharacterController.Examples
 
         private void Update()
         {
+            if (!isAvailable)
+            {
+                float timeSinceLastUsage = Time.time - lastUsageTime;
+
+                // If the elapsed time is greater than or equal to cooldown time, the ability is ready
+                if (timeSinceLastUsage >= cooldownTime)
+                {
+                    isAvailable = true;
+                }
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 Cursor.lockState = CursorLockMode.Locked;
@@ -108,40 +118,56 @@ namespace KinematicCharacterController.Examples
         public bool windIsOn = false;
         public bool earthIsOn = false;
 
+        public float cooldownTime = 2f; // Cooldown time in seconds
+        private bool isAvailable = true;
+        private float lastUsageTime;
 
         public void SwapElement()
         {
-            if (fireIsOn == true)
+            if (isAvailable)
             {
-                Fire.gameObject.SetActive(false);
-                Earth.gameObject.SetActive(true);
-                earthIsOn = true;
-                fireIsOn = false;
+                if (fireIsOn == true)
+                {
+                    Fire.gameObject.SetActive(false);
+                    Earth.gameObject.SetActive(true);
+                    earthIsOn = true;
+                    fireIsOn = false;
 
-            }
-            else if (waterIsON == true)
-            {
-                Water.gameObject.SetActive(false);
-                waterIsON = false;
-                Fire.gameObject.SetActive(true);
-                fireIsOn = true;
-            }
-            else if(earthIsOn == true)
-            {
-                Earth.gameObject.SetActive(false);
-                earthIsOn=false;
-                Wind.gameObject.SetActive(true);
-                windIsOn = true;
+                }
+                else if (waterIsON == true)
+                {
+                    Water.gameObject.SetActive(false);
+                    waterIsON = false;
+                    Fire.gameObject.SetActive(true);
+                    fireIsOn = true;
+                }
+                else if (earthIsOn == true)
+                {
+                    Earth.gameObject.SetActive(false);
+                    earthIsOn = false;
+                    Wind.gameObject.SetActive(true);
+                    windIsOn = true;
 
+                }
+                else if (windIsOn == true)
+                {
+                    Wind.gameObject.SetActive(false);
+                    windIsOn = false;
+                    Water.gameObject.SetActive(true);
+                    waterIsON = true;
+                }
+                lastUsageTime = Time.time;
+
+                // Disable the ability during cooldown
+                isAvailable = false;
             }
-            else if(windIsOn == true)
+            else
             {
-                Wind.gameObject.SetActive(false);
-                windIsOn = false;
-                Water.gameObject.SetActive(true);
-                waterIsON=true;
+                // The ability is not available, you can add a sound or visual effect to indicate this to the player
+                Debug.Log("Ability on cooldown...");
             }
-            
+
+
         }
     }
 }
