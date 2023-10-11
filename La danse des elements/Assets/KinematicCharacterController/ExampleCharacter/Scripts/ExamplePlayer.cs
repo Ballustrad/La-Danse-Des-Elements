@@ -121,7 +121,10 @@ namespace KinematicCharacterController.Examples
         public float cooldownTime = 2f; // Cooldown time in seconds
         private bool isAvailable = true;
         private float lastUsageTime;
-
+        public GameObject petsFire;
+        public GameObject petsWater;
+        public GameObject petsWind;
+        public GameObject petsEarth;
         public void SwapElement()
         {
             if (isAvailable)
@@ -132,6 +135,8 @@ namespace KinematicCharacterController.Examples
                     Earth.gameObject.SetActive(true);
                     earthIsOn = true;
                     fireIsOn = false;
+                    petsEarth.gameObject.SetActive(true);
+                    petsFire.gameObject.SetActive(false);
 
                 }
                 else if (waterIsON == true)
@@ -140,6 +145,8 @@ namespace KinematicCharacterController.Examples
                     waterIsON = false;
                     Fire.gameObject.SetActive(true);
                     fireIsOn = true;
+                    petsWater.gameObject.SetActive(false);
+                    petsFire.gameObject.SetActive (true);
                 }
                 else if (earthIsOn == true)
                 {
@@ -147,6 +154,8 @@ namespace KinematicCharacterController.Examples
                     earthIsOn = false;
                     Wind.gameObject.SetActive(true);
                     windIsOn = true;
+                    petsEarth.gameObject.SetActive(false);
+                    petsWind.gameObject.SetActive(true);
 
                 }
                 else if (windIsOn == true)
@@ -155,6 +164,9 @@ namespace KinematicCharacterController.Examples
                     windIsOn = false;
                     Water.gameObject.SetActive(true);
                     waterIsON = true;
+                    petsWind.gameObject.SetActive(false);
+                    petsWater.gameObject.SetActive(true) ;
+
                 }
                 lastUsageTime = Time.time;
 
