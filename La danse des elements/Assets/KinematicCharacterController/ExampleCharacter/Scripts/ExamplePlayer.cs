@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
+using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 namespace KinematicCharacterController.Examples
 {
@@ -22,6 +24,7 @@ namespace KinematicCharacterController.Examples
         public GameObject Wind;
         public GameObject Earth;
 
+        public int currentElement = 1;
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -36,6 +39,39 @@ namespace KinematicCharacterController.Examples
 
         private void Update()
         {
+            if (fireIsOn == true )
+            {
+                currentElement = 1;
+            }
+            if (waterIsOn == true)
+            {
+                currentElement = 4;
+            }
+            if (windIsOn == true)
+            {
+                currentElement = 3;
+            }
+            if (earthIsOn == true)
+            {
+                currentElement = 2;
+            }
+            
+            switch (currentElement)
+            {
+                case 1:
+                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyFire; break;
+                    
+
+                case 2:
+                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyEarth; break;
+                case 3:
+                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyWind; break;
+                case 4:
+                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyWater; break;
+
+                default: break; 
+            }
+
             if (!isAvailable)
             {
                 float timeSinceLastUsage = Time.time - lastUsageTime;
@@ -114,7 +150,7 @@ namespace KinematicCharacterController.Examples
             Character.SetInputs(ref characterInputs);
         }
         public bool fireIsOn = true;
-        public bool waterIsON = false;
+        public bool waterIsOn = false;
         public bool windIsOn = false;
         public bool earthIsOn = false;
 
@@ -125,6 +161,7 @@ namespace KinematicCharacterController.Examples
         public GameObject petsWater;
         public GameObject petsWind;
         public GameObject petsEarth;
+        
         public void SwapElement()
         {
             if (isAvailable)
@@ -138,11 +175,12 @@ namespace KinematicCharacterController.Examples
                     petsEarth.gameObject.SetActive(true);
                     petsFire.gameObject.SetActive(false);
 
+
                 }
-                else if (waterIsON == true)
+                else if (waterIsOn == true)
                 {
                     Water.gameObject.SetActive(false);
-                    waterIsON = false;
+                    waterIsOn = false;
                     Fire.gameObject.SetActive(true);
                     fireIsOn = true;
                     petsWater.gameObject.SetActive(false);
@@ -163,7 +201,7 @@ namespace KinematicCharacterController.Examples
                     Wind.gameObject.SetActive(false);
                     windIsOn = false;
                     Water.gameObject.SetActive(true);
-                    waterIsON = true;
+                    waterIsOn = true;
                     petsWind.gameObject.SetActive(false);
                     petsWater.gameObject.SetActive(true) ;
 
@@ -179,6 +217,16 @@ namespace KinematicCharacterController.Examples
                 Debug.Log("Ability on cooldown...");
             }
 
+
+        }
+        public GameObject energyBar;
+        public float currentEnergyWater = 1;
+        public float currentEnergyFire = 1;
+        public float currentEnergyEarth = 1;
+        public float currentEnergyWind = 1;
+
+        public void UseConstructionSkill()
+        {
 
         }
     }
