@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 49890385}
   - component: {fileID: 49890387}
   - component: {fileID: 49890386}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 115587169}
   - component: {fileID: 115587168}
   - component: {fileID: 115587167}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 221302530}
   - component: {fileID: 221302529}
   - component: {fileID: 221302528}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 224289293}
   - component: {fileID: 224289295}
   - component: {fileID: 224289294}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: vent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 322985842}
   - component: {fileID: 322985841}
   - component: {fileID: 322985840}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 478302936}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,7 +925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 508840721}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: PetWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -959,7 +959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 653136093}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: CameraTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 681780748}
   - component: {fileID: 681780747}
   - component: {fileID: 681780746}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1189,7 +1189,7 @@ GameObject:
   - component: {fileID: 779692894}
   - component: {fileID: 779692893}
   - component: {fileID: 779692892}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,7 +1294,7 @@ GameObject:
   - component: {fileID: 857293333}
   - component: {fileID: 857293332}
   - component: {fileID: 857293331}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   ObstructionCheckRadius: 0.2
   ObstructionLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 127
   ObstructionSharpness: 10000
   IgnoredColliders: []
 --- !u!20 &860663684
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 988748969}
   - component: {fileID: 988748968}
   - component: {fileID: 988748967}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1686,7 +1686,7 @@ GameObject:
   - component: {fileID: 1043214548}
   - component: {fileID: 1043214550}
   - component: {fileID: 1043214552}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: ExampleCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1846,7 +1846,7 @@ GameObject:
   - component: {fileID: 1096386255}
   - component: {fileID: 1096386257}
   - component: {fileID: 1096386256}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1929,7 +1929,7 @@ GameObject:
   - component: {fileID: 1171090484}
   - component: {fileID: 1171090486}
   - component: {fileID: 1171090485}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: eau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2011,7 +2011,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1370334135}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: PetEarth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2047,7 +2047,7 @@ GameObject:
   - component: {fileID: 1398125517}
   - component: {fileID: 1398125516}
   - component: {fileID: 1398125515}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: terre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2129,7 +2129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1450294183}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: PetWind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2166,7 +2166,7 @@ GameObject:
   - component: {fileID: 1536327683}
   - component: {fileID: 1536327682}
   - component: {fileID: 1536327681}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2389,7 +2389,7 @@ GameObject:
   - component: {fileID: 1629974564}
   - component: {fileID: 1629974563}
   - component: {fileID: 1629974562}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2491,7 +2491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701985025}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2533,7 +2533,7 @@ GameObject:
   - component: {fileID: 1776652838}
   - component: {fileID: 1776652837}
   - component: {fileID: 1776652836}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2638,7 +2638,7 @@ GameObject:
   - component: {fileID: 1789956583}
   - component: {fileID: 1789956582}
   - component: {fileID: 1789956581}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2743,7 +2743,7 @@ GameObject:
   - component: {fileID: 1793787336}
   - component: {fileID: 1793787335}
   - component: {fileID: 1793787334}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Pet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2847,7 +2847,7 @@ GameObject:
   - component: {fileID: 1810421825}
   - component: {fileID: 1810421827}
   - component: {fileID: 1810421826}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: feu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2929,7 +2929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1887825585}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: PetFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2965,7 +2965,7 @@ GameObject:
   - component: {fileID: 1936409673}
   - component: {fileID: 1936409675}
   - component: {fileID: 1936409674}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3048,7 +3048,7 @@ GameObject:
   - component: {fileID: 2061640619}
   - component: {fileID: 2061640621}
   - component: {fileID: 2061640620}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
