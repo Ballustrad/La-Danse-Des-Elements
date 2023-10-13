@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fragment
   layers:
   - Default
   - TransparentFX
@@ -12,10 +13,10 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
-  - 
-  - 
-  - 
+  - FireFragment
+  - WaterFragment
+  - WindFragment
+  - RockFragment
   - 
   - 
   - 
