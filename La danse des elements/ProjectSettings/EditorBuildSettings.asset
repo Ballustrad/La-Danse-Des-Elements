@@ -5,19 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Menu-Galaan.unity
-    guid: b828e10be69937c499170f36a0a462e4
-  - enabled: 0
-    path: Assets/Scenes/Collection-Galaan.unity
-    guid: 371652973a9019141acecf488ac0e0b0
-  - enabled: 1
-    path: Assets/Scenes/TrainingRoom-Galaan.unity
-    guid: 9150ebc491220f740b2620177ee9be7d
-  - enabled: 1
-    path: Assets/Scenes/MiniBiome-Galaan.unity
-    guid: 3510afeb388df72499794e9103895afa
   m_configObjects: {}
