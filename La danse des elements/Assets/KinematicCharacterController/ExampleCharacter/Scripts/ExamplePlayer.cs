@@ -23,6 +23,7 @@ namespace KinematicCharacterController.Examples
         public GameObject Water;
         public GameObject Wind;
         public GameObject Earth;
+        
 
         public int currentElement = 1;
         private void Start()
@@ -59,15 +60,18 @@ namespace KinematicCharacterController.Examples
             switch (currentElement)
             {
                 case 1:
-                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyFire; break;
-                    
+                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyFire; 
+                    energyBar.gameObject.GetComponent<Scrollbar>().image.color = new Color((float).77, 0, 0, 1); break;
 
                 case 2:
-                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyEarth; break;
+                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyEarth; 
+                    energyBar.gameObject.GetComponent<Scrollbar>().image.color = new Color ((float).17,(float).45, (float).14, 1 ); break;
                 case 3:
-                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyWind; break;
+                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyWind; 
+                    energyBar.gameObject.GetComponent<Scrollbar>().image.color = Color.white; break;
                 case 4:
-                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyWater; break;
+                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyWater;
+                    energyBar.gameObject.GetComponent<Scrollbar>().image.color = new Color((float).18, (float).66, 1,1); break;
 
                 default: break; 
             }
@@ -162,6 +166,7 @@ namespace KinematicCharacterController.Examples
         public GameObject petsWind;
         public GameObject petsEarth;
         
+        
         public void SwapElement()
         {
             if (isAvailable)
@@ -224,10 +229,11 @@ namespace KinematicCharacterController.Examples
         public float currentEnergyFire = 1;
         public float currentEnergyEarth = 1;
         public float currentEnergyWind = 1;
+        public float currentEnergy;
 
         public void UseConstructionSkill()
         {
-
+            energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergy - (float).33;
         }
     }
 }
