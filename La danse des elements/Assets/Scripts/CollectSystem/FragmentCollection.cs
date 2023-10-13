@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestFragmentCollection : MonoBehaviour
+public class FragmentCollection : MonoBehaviour
 {
     private int FireFragments = 0;
     private int WaterFragments = 0;
