@@ -16,7 +16,7 @@ public class TestFragmentCollection : MonoBehaviour
     public bool uiFragmentVisible = false;
 
     private Vector2 uiFragmentHiddenPosition = new Vector2(-195f, 0f); // Position when hidden
-    private Vector2 uiFragmentVisiblePosition = new Vector2(0f, 0f);   // Position when visible
+    private Vector2 uiFragmentVisiblePosition = new Vector2(25f, 0f);   // Position when visible
 
     public TextMeshProUGUI fireFragmentText;
     public TextMeshProUGUI waterFragmentText;
