@@ -43,35 +43,39 @@ namespace KinematicCharacterController.Examples
             if (fireIsOn == true )
             {
                 currentElement = 1;
+                currentEnergy = currentEnergyFire;
             }
             if (waterIsOn == true)
             {
                 currentElement = 4;
+                currentEnergy = currentEnergyWater;
             }
             if (windIsOn == true)
             {
                 currentElement = 3;
+                currentEnergy = currentEnergyWind;
             }
             if (earthIsOn == true)
             {
                 currentElement = 2;
+                currentEnergy = currentEnergyEarth;
             }
             
             switch (currentElement)
             {
                 case 1:
-                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyFire; 
-                    energyBar.gameObject.GetComponent<Scrollbar>().image.color = new Color((float).77, 0, 0, 1); break;
+                    energyBar.gameObject.GetComponent<Slider>().value = currentEnergyFire; 
+                    backgroundBar.GetComponent<Image>().color = new Color((float).77, 0, 0, 1); break;
 
                 case 2:
-                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyEarth; 
-                    energyBar.gameObject.GetComponent<Scrollbar>().image.color = new Color ((float).17,(float).45, (float).14, 1 ); break;
+                    energyBar.gameObject.GetComponent<Slider>().value = currentEnergyEarth; 
+                    backgroundBar.GetComponent<Image>().color = new Color ((float).17,(float).45, (float).14, 1 ); break;
                 case 3:
-                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyWind; 
-                    energyBar.gameObject.GetComponent<Scrollbar>().image.color = Color.white; break;
+                    energyBar.gameObject.GetComponent<Slider>().value = currentEnergyWind; 
+                    backgroundBar.GetComponent<Image>().color = Color.white; break;
                 case 4:
-                    energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergyWater;
-                    energyBar.gameObject.GetComponent<Scrollbar>().image.color = new Color((float).18, (float).66, 1,1); break;
+                    energyBar.gameObject.GetComponent<Slider>().value = currentEnergyWater;
+                    backgroundBar.GetComponent<Image>().color = new Color((float).18, (float).66, 1,1); break;
 
                 default: break; 
             }
@@ -94,6 +98,10 @@ namespace KinematicCharacterController.Examples
             {
                 SwapElement();
             }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                UseConstructionSkill();
+            }
             HandleCharacterInput();
         }
 
@@ -108,7 +116,6 @@ namespace KinematicCharacterController.Examples
 
             HandleCameraInput();
         }
-
         private void HandleCameraInput()
         {
             // Create the look input vector for the camera
@@ -225,15 +232,33 @@ namespace KinematicCharacterController.Examples
 
         }
         public GameObject energyBar;
-        public float currentEnergyWater = 1;
-        public float currentEnergyFire = 1;
-        public float currentEnergyEarth = 1;
-        public float currentEnergyWind = 1;
+        public GameObject backgroundBar;
+        public float currentEnergyWater = 3;
+        public float currentEnergyFire = 3;
+        public float currentEnergyEarth = 3;
+        public float currentEnergyWind = 3;
         public float currentEnergy;
 
         public void UseConstructionSkill()
         {
-            energyBar.gameObject.GetComponent<Scrollbar>().value = currentEnergy - (float).33;
+            energyBar.gameObject.GetComponent<Slider>().value = currentEnergy - 1;
+            if(currentElement == 1)
+            {
+                currentEnergyFire = energyBar.GetComponent<Slider>().value;
+            }
+            if (currentElement == 2)
+            {
+                currentEnergyEarth = energyBar.GetComponent<Slider>().value;
+            }
+            if (currentElement == 3)
+            {
+                currentEnergyWind = energyBar.GetComponent<Slider>().value;
+            }
+            if (currentElement == 4)
+            {
+                currentEnergyWater = energyBar.GetComponent<Slider>().value;
+            }
+            Debug.Log("a");
         }
     }
 }
