@@ -61,17 +61,20 @@ public class FragmentCollection : MonoBehaviour
     {
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
+            Debug.Log("Tab is Pressed");
             uiFragmentVisible = !uiFragmentVisible;
 
             if (uiFragmentVisible)
             {
                 // Slide the UI in
+                Debug.Log("UI Fragment ON");
                 uiFragmentText.SetActive(true);
                 StartCoroutine(MoveUITo(uiFragmentVisiblePosition));
             }
             else
             {
                 // Slide the UI out
+                Debug.Log("UI Fragment OFF");
                 StartCoroutine(MoveUITo(uiFragmentHiddenPosition, () => uiFragmentText.SetActive(false)));
             }
         }

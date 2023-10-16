@@ -61,7 +61,7 @@ public class MainMenu : MonoBehaviour
     //LoadMENU
     public void TrainingRoomPlay()
     {
-        SceneManager.LoadScene("TrainingRoom-Galaan");
+        SceneManager.LoadScene("Collection-Galaan");
     }
     public void MiniBiomePlay()
     {
